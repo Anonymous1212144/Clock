@@ -4,8 +4,8 @@
 int main()
 {
     struct timespec ts;
-    char buff[50];
     struct tm ltime;
+    char buff[50];
 
     while (1)
     {
@@ -14,4 +14,5 @@ int main()
         strftime(buff, sizeof buff, "%F W%V-%u UTC%z      %T", &ltime);
         printf("%s.%09ld\r", buff, ts.tv_nsec);
     }
+
 }
